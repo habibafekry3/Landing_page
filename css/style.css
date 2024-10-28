@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oxanium:wght@200..800&family=Unbounded:wght@500&display=swap');
+
+body{
+    color: #e5e5e5;
+    font-family: "Unbounded", sans-serif !important;
+    font-size: 14px;
+    background-color: #161616;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5em;
+    background-color: rgba(45, 43, 44, 0.925);
+    z-index: 1;
+    margin: 0.5em;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content:center;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar a{
+    margin-right: 0.5em;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: rgba(188, 188, 188, 0.797);
+}
+
+.navbar a.active {
+    color: rgb(0, 0, 0);
+    background-color: rgb(207, 225, 140);
+    border-radius: 64px 48px 16px 96px;
+}
+
+section{
+    margin: 5em 4em ;
+    padding: 2em;
+    position: relative;
+    border-radius: 64px 48px 16px 96px;
+}
+
+#section1{
+    min-height: 95vh;
+    background-image: url(../image/rf.jpg);
+    background-size: cover;
+    border-radius: 0;
+    margin:0;
+}
+
+h1{
+    color:#cfcfcf;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9.5em;
+}
+
+b{
+    background-image: url(../image/v.png);
+    background-size:contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.content,
+.contento{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5em;
+    min-height: 60vh;
+}
+
+p.num{
+    margin:0;
+    font-family: "Oxanium", sans-serif;
+    font-size: 6em;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.099);
+    margin-bottom: -1.2em;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 5em;
+}
+
+a.read{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6em;
+    font-size: 1em;
+    color: rgb(207, 225, 140);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.arrow{
+    font-size: 2em;
+}
+
+section img{
+    width: 100%;
+    height: 100%;
+    border-radius: 34px 18px 0px 66px;
+}
+
+section.activeclass {
+    box-shadow: 10px 15px 20px -10px rgba(255, 255, 255, 0.367);
+}
+
+footer{
+    font-size: 0.8em;
+    margin-top: 5em;
+    text-align: center;
+    background-color: rgba(45, 43, 44, 0.925);
+    box-shadow: 10px 10px 27px -12px rgba(197, 193, 193, 0.403);
+    padding: 1em;
+}
+
+.developer{
+    font-size: 1.1em;
+    color: rgb(168, 182, 118);
+}
+
+.but{
+    display: flex;
+    justify-content: flex-end;
+}
+
+button{
+    display: none;
+    position: fixed;
+    bottom: 3em;
+    right: 2em;
+    padding: 1em;
+    background-color: #8f9872;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 64px 48px 16px 96px;
+}
+
+/* ==========MEDIA========== */
+
+@media (max-width: 320px){
+    body{
+        font-size: 10px !important;
+    }
+    .navbar ul{
+        flex-direction: column;
+        gap: 0.7em;
+    }
+    section{
+        margin: 1em;
+        padding: 0.5em;
+    }
+    #section1{
+        min-height: 80vh;
+    }
+    h1{
+        font-size: 4em ;
+    }
+    h2{
+        font-size: 3em ;
+    }
+    .content,
+    .contento{
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+    p.hide{
+        display: none;
+    } 
+    p.num{
+        display: none;
+    }
+    button{
+        font-size: 15px;
+    }
+}
+
+/* ==========PHONE========== */
+
+@media (min-width:321px) and (max-width:700px) {
+    body{
+        font-size: 12px !important;
+    }
+    .navbar ul{
+        padding-inline-start: 10px;
+    }
+    .navbar a{
+        font-size: 12px !important;
+        padding: 0.4em;
+    }
+    section{
+        margin: 6em 1.5em;
+        padding: 1em;
+    }
+    h1{
+        font-size: 5em ;
+    }
+    h2{
+        font-size: 3.5em ;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .contento{
+        display:flex;
+        flex-direction: column-reverse;
+        gap:1.5em;
+    }
+    p.hide{
+        display: none;
+    }
+    button{
+        font-size: 18px;
+    }
+}
+
+/* ==========TABLET========== */
+
+@media (min-width:700px) and (max-width:1000px) {
+    section{
+        margin: 8em 5em;
+    }
+    .content{
+        padding-top:0 ;
+        display: flex;
+        flex-direction: column;
+    }
+    .contento{
+        display: flex;
+        flex-direction: column-reverse;
+        gap:5em;
+    }
+    p.hide{
+        display: none;
+    }
+    section img{
+        width: 35rem;
+        height: 90%;
+    }
+}
